@@ -420,7 +420,7 @@ header > h1,
   }
 
   .container {
-    height: 100vh;
+    height: 100svh;
     display: flex;
     gap: 2rem;
     padding: 1rem;
@@ -457,7 +457,7 @@ header > h1,
   }
 
   .lobby-container {
-    height: calc(100vh - 120px);
+    height: calc(100svh - 120px);
   }
 
   .lobby {
