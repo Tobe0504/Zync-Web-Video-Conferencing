@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
 
   sessionStorage.setItem("video-conf-name", e.target.name.value);
 
-  let inviteCode = e.target.room.value;
+  let inviteCode = e.target.room.value?.replaceAll(" ", "-").toLowerCase();
 
   if (!inviteCode) {
     inviteCode = String(Math.floor(Math.random() * 10000));
