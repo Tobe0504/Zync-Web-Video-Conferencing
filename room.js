@@ -239,4 +239,4 @@ document.getElementById("screen-btn").addEventListener("click", toggleScreen);
 document.getElementById("join-btn").addEventListener("click", joinStream);
 document.getElementById("leave-btn").addEventListener("click", leaveStream);
 
-// joinRoomInit();
+joinRoomInit();
