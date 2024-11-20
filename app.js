@@ -86,7 +86,7 @@ let expandVideoFrame = (e) => {
 
 const expandMobileChats = () => {
   if (window.innerWidth < 767) {
-    mobileChats.style.height = "100vh";
+    mobileChats.style.height = "100dvh";
 
     scrollToBottomOfChatFrame();
   } else {

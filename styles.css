@@ -397,7 +397,7 @@ header > h1,
 }
 
 #mobile-chats > .messagesContainer {
-  height: 90vh;
+  height: 90dvh;
 }
 
 @media screen and (max-width: 767px) {
@@ -420,7 +420,7 @@ header > h1,
   }
 
   .container {
-    height: 100svh;
+    height: 100dvh;
     display: flex;
     gap: 2rem;
     padding: 1rem;
@@ -457,7 +457,7 @@ header > h1,
   }
 
   .lobby-container {
-    height: calc(100svh - 120px);
+    height: calc(100dvh - 120px);
   }
 
   .lobby {
