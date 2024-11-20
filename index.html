@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Stay in sync, always" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Zync</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section>
+        <header>
+          <h1>Zync</h1>
+        </header>
+        <div>
+          <div id="displayFrame">
+            <!-- <div>EAB</div> -->
+          </div>
+
+          <div class="controls" id="controls">
+            <div id="screen-btn">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.7418 4.83496C3.2722 4.83496 2.82184 5.02151 2.48979 5.35356C2.15774 5.68561 1.97119 6.13597 1.97119 6.60557V17.2292C1.97109 17.4618 2.01681 17.6921 2.10575 17.907C2.19468 18.1219 2.32509 18.3172 2.48951 18.4817C2.65394 18.6462 2.84916 18.7767 3.06403 18.8657C3.2789 18.9548 3.50921 19.0006 3.7418 19.0006H19.087C19.5566 19.0006 20.007 18.814 20.3391 18.482C20.6711 18.1499 20.8576 17.6996 20.8576 17.23V6.60635C20.8576 6.13676 20.6711 5.6864 20.3391 5.35435C20.007 5.02229 19.5566 4.83575 19.087 4.83575H3.7418V4.83496ZM11.8299 7.85758L14.3914 10.4191C14.4989 10.5304 14.5583 10.6795 14.5569 10.8343C14.5554 10.989 14.4933 11.137 14.3838 11.2464C14.2743 11.3558 14.1263 11.4178 13.9715 11.4191C13.8168 11.4203 13.6677 11.3608 13.5565 11.2532L12.003 9.6998V15.5601C12.003 15.7166 11.9409 15.8668 11.8302 15.9774C11.7195 16.0881 11.5694 16.1503 11.4128 16.1503C11.2563 16.1503 11.1062 16.0881 10.9955 15.9774C10.8848 15.8668 10.8226 15.7166 10.8226 15.5601V9.70137L9.27238 11.2532C9.21796 11.3096 9.15286 11.3546 9.08087 11.3856C9.00887 11.4165 8.93144 11.4328 8.85307 11.4336C8.7747 11.4343 8.69698 11.4194 8.62443 11.3897C8.55189 11.3601 8.48597 11.3163 8.43053 11.2609C8.37509 11.2055 8.33123 11.1397 8.30152 11.0671C8.27181 10.9946 8.25684 10.9169 8.25748 10.8385C8.25813 10.7602 8.27437 10.6827 8.30527 10.6107C8.33617 10.5387 8.3811 10.4735 8.43744 10.4191L10.995 7.85837C11.0498 7.80352 11.1149 7.76001 11.1865 7.73033C11.2581 7.70065 11.3349 7.68537 11.4125 7.68537C11.49 7.68537 11.5668 7.70065 11.6384 7.73033C11.71 7.76001 11.7751 7.80352 11.8299 7.85837V7.85758Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="control-active" id="camera-btn">
+              <svg
+                width="18"
+                height="13"
+                viewBox="0 0 18 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.31068 13C0.961165 13 0.65534 12.8781 0.393204 12.6344C0.131068 12.3906 0 12.1062 0 11.7812V1.21875C0 0.89375 0.131068 0.609375 0.393204 0.365625C0.65534 0.121875 0.961165 0 1.31068 0H12.6699C13.0194 0 13.3252 0.121875 13.5874 0.365625C13.8495 0.609375 13.9806 0.89375 13.9806 1.21875V5.58594L17.4757 2.33594V10.6641L13.9806 7.41406V11.7812C13.9806 12.1062 13.8495 12.3906 13.5874 12.6344C13.3252 12.8781 13.0194 13 12.6699 13H1.31068Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div id="leave-btn">
+              <svg
+                width="35"
+                height="15"
+                viewBox="0 0 35 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M34.4639 9.98019L34.0823 11.7349C33.7236 13.3798 32.1496 14.4498 30.4048 14.2354L26.9294 13.8074C25.4166 13.6205 24.1516 12.5083 23.8027 11.0587L22.8337 7.02095C21.2594 6.32681 19.5139 5.98346 17.5977 5.98951C15.7525 5.98046 13.9242 6.34174 12.2211 7.05198L11.4584 10.7893C11.1684 12.204 9.96561 13.235 8.47631 13.3443L5.00459 13.6031C3.2713 13.7312 1.64423 12.5881 1.19616 10.9289L0.715287 9.15166C0.237541 7.38171 0.753036 5.54462 2.07001 4.33179C5.17911 1.4646 10.2699 0.12148 17.3455 0.29692C24.4317 0.472998 29.6062 2.07832 32.8625 5.11108C34.2331 6.38695 34.8433 8.23891 34.4639 9.98019Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="control-active" id="mic-btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.9995 2.99951C11.0049 2.99951 10.0511 3.3946 9.34786 4.09786C8.6446 4.80112 8.24951 5.75495 8.24951 6.74951V11.9995C8.24951 12.9941 8.6446 13.9479 9.34786 14.6512C10.0511 15.3544 11.0049 15.7495 11.9995 15.7495C12.9941 15.7495 13.9479 15.3544 14.6512 14.6512C15.3544 13.9479 15.7495 12.9941 15.7495 11.9995V6.74951C15.7495 5.75495 15.3544 4.80112 14.6512 4.09786C13.9479 3.3946 12.9941 2.99951 11.9995 2.99951ZM5.99951 11.2495C6.19842 11.2495 6.38919 11.3285 6.52984 11.4692C6.67049 11.6098 6.74951 11.8006 6.74951 11.9995C6.74951 13.3919 7.30264 14.7273 8.2872 15.7118C9.27177 16.6964 10.6071 17.2495 11.9995 17.2495C13.3919 17.2495 14.7273 16.6964 15.7118 15.7118C16.6964 14.7273 17.2495 13.3919 17.2495 11.9995C17.2495 11.8006 17.3285 11.6098 17.4692 11.4692C17.6098 11.3285 17.8006 11.2495 17.9995 11.2495C18.1984 11.2495 18.3892 11.3285 18.5298 11.4692C18.6705 11.6098 18.7495 11.8006 18.7495 11.9995C18.7498 13.6601 18.138 15.2625 17.0311 16.5003C15.9242 17.7381 14.3998 18.5245 12.7495 18.709V20.2495C12.7495 20.4484 12.6705 20.6392 12.5298 20.7798C12.3892 20.9205 12.1984 20.9995 11.9995 20.9995C11.8006 20.9995 11.6098 20.9205 11.4692 20.7798C11.3285 20.6392 11.2495 20.4484 11.2495 20.2495V18.709C9.59922 18.5245 8.07486 17.7381 6.96793 16.5003C5.861 15.2625 5.24919 13.6601 5.24951 11.9995C5.24951 11.8006 5.32853 11.6098 5.46918 11.4692C5.60983 11.3285 5.8006 11.2495 5.99951 11.2495Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div id="user-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                fill="white"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <button id="join-btn">Join stream</button>
+
+          <div class="participants" id="participants"></div>
+        </div>
+      </section>
+
+      <section>
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          id="close"
+        >
+          <path
+            d="M25 1L1 25M1 1L25 25"
+            stroke="#999999"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div class="sideSectionNav">
+          <div id="messages">Messages</div>
+          <div id="participants">Participants</div>
+        </div>
+
+        <div class="participantsContainer" id="participantsContainer"></div>
+
+        <div class="messagesContainer">
+          <form class="textSection" id="message-form">
+            <textarea
+              placeholder="Type a message here..."
+              name="message"
+            ></textarea>
+            <button>Send</button>
+          </form>
+
+          <div class="chatSection" id="chatSection"></div>
+        </div>
+      </section>
+    </div>
+
+    <section id="mobile-chats">
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 26 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        id="close"
+      >
+        <path
+          d="M25 1L1 25M1 1L25 25"
+          stroke="#999999"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <div class="sideSectionNav">
+        <div id="messages">Messages</div>
+        <div id="participants-mobile">Participants</div>
+      </div>
+
+      <div
+        class="participantsContainer-mobile"
+        id="participantsContainer-mobile"
+      ></div>
+
+      <div class="messagesContainer-mobile">
+        <form class="textSection" id="message-form-mobile">
+          <textarea
+            placeholder="Tell us your thoughts"
+            name="message"
+          ></textarea>
+          <button>Send</button>
+        </form>
+
+        <div class="chatSection" id="chatSection-mobile"></div>
+      </div>
+    </section>
+  </body>
+
+  <script src="./AgoraRTC_N-4.22.2.js"></script>
+  <script src="./agora-rtm-sdk-1.5.1.js"></script>
+  <script src="./roomRtm.js"></script>
+  <script src="./room.js"></script>
+  <script src="./app.js"></script>
+</html>

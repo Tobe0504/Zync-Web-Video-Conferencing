@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2";
+}
+
+:root {
+  --glassBg: rgba(32, 32, 32, 0.09);
+  --glassBorder: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+  background: #000;
+  font-family: "Exo 2";
+  color: #fff;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.container > section {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container > section:nth-child(1) {
+  flex: 1;
+}
+
+.container > section:nth-child(2) {
+  flex-basis: 372px;
+  opacity: 0px;
+  backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
+  box-shadow: 3px 4px 32px 0px rgba(0, 0, 0, 0.54);
+  background: var(--glassBg);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+header > h1,
+.lobby > h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.container > section:nth-child(1) > div {
+  height: calc(100% - 60px - 1rem);
+  border: var(--glassBorder);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#displayFrame {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#displayFrame > div {
+  height: 100%;
+  width: 100%;
+}
+
+#displayFrame video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.controls {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  bottom: 70px;
+}
+
+#join-btn {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  width: 200px;
+  padding: 1rem 2rem;
+  right: 0;
+  bottom: 70px;
+  cursor: pointer;
+
+  border: var(--glassBorder);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.78px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.controls > div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.controls > div:not(.controls > div:nth-child(3)) {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: var(--glassBorder);
+}
+
+.controls > div:not(.control-active) {
+  background-color: rgba(0, 0, 0, 0.52);
+}
+
+.controls > div:nth-child(3) {
+  width: 74px;
+  height: 64px;
+  background-color: rgba(248, 0, 15, 1);
+  border-radius: 12px;
+}
+
+.controls > div.control-active {
+  background-color: rgba(73, 98, 125, 1);
+}
+
+.participants,
+.participants-mobile {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 370px;
+}
+
+.participants > div,
+.participants-mobile > div {
+  width: 89px;
+  height: 85px;
+  border: var(--glassBorder);
+  border-radius: 6px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.video-player > div {
+  border-radius: 6px;
+  height: 100%;
+}
+
+.video-player video {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+#close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.sideSectionNav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.sideSectionNav > div {
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  border-bottom: var(--glassBorder);
+}
+
+.participantsContainer,
+.participantsContainer-mobile {
+  margin-top: 2rem;
+}
+
+.participantsContainer > p,
+.participantsContainer-mobile > p {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.participantsContainer > p > svg,
+.participantsContainer-mobile > p > svg {
+  cursor: pointer;
+}
+
+.messagesContainer,
+.messagesContainer-mobile {
+  height: calc(100% - 50px);
+  position: relative;
+}
+
+.textSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.textSection > textarea,
+.lobby > input {
+  flex: 1;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.78px;
+  border: var(--glassBorder);
+  background-color: transparent;
+  outline: none;
+  padding: 0.5rem;
+  resize: none;
+  color: #fff;
+  display: block;
+}
+
+.textSection > textarea::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.78px;
+  color: #999999;
+}
+
+.textSection > button,
+.lobby > button {
+  padding: 0.75rem 1.5rem;
+  border: var(--glassBorder);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.78px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat {
+  max-width: 90%;
+  margin-bottom: 1rem;
+  width: auto;
+  min-width: 40%;
+}
+
+.chat-bot {
+  margin-bottom: 1rem;
+}
+
+.chat > p:nth-child(1),
+.chat-bot > p:nth-child(1) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.38px;
+  margin-bottom: 0.5rem;
+}
+
+.chat-bot > p:nth-child(1) {
+  display: none;
+}
+
+.chat > p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.58px;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: rgba(74, 87, 103, 1);
+}
+
+.chat-bot > p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.58px;
+  border-radius: 4px;
+  color: rgba(74, 87, 103, 1);
+  text-align: center;
+}
+
+.chatSection {
+  height: calc(100% - 80px);
+  padding: 0 1rem;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: scroll;
+  padding-top: 1rem;
+}
+
+.chatSection > div {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.lobby-body {
+  padding: 1rem;
+}
+
+.lobby-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.lobby {
+  border: var(--glassBorder);
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 400px;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+#mobile-chats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  height: 0vh;
+  background: #000;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-chats > .messagesContainer {
+  height: 90vh;
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2";
+  }
+
+  :root {
+    --glassBg: rgba(32, 32, 32, 0.09);
+    --glassBorder: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  body {
+    background: #000;
+    font-family: "Exo 2";
+    color: #fff;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .container > section {
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .container > section:nth-child(1) {
+    flex: 1;
+    width: 100%;
+  }
+
+  .container > section:nth-child(2) {
+    display: none;
+  }
+
+  #displayFrame > div {
+    border-radius: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .lobby-body {
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .lobby-container {
+    height: calc(100vh - 120px);
+  }
+
+  .lobby {
+    height: 220px;
+    min-width: 100%;
+    padding: 0rem;
+    margin-top: 1rem;
+    border: none;
+  }
+}
