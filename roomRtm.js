@@ -96,7 +96,7 @@ let addMessageToDom = (name, message) => {
     lastMessage.scrollIntoView();
   }
 
-  // scrollToBottomOfChatFrame();
+  scrollToBottomOfChatFrame();
 };
 
 let addBotMessageToDom = (botMessage) => {
@@ -104,7 +104,7 @@ let addBotMessageToDom = (botMessage) => {
   let messagesWrappperMobile = document.getElementById("chatSection-mobile");
 
   let newMessage = ` <div class="chat-bot">
-    <p>Video Conf Bot</p>
+    <p>Zync Bot</p>
     <p>
       ${botMessage}
     </p>
@@ -118,7 +118,7 @@ let addBotMessageToDom = (botMessage) => {
     lastMessage.scrollIntoView();
   }
 
-  // scrollToBottomOfChatFrame();
+  scrollToBottomOfChatFrame();
 };
 
 let leaveChannel = async () => {
